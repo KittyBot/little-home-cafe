@@ -1,19 +1,13 @@
 <template>
   <div class="welcome-container">
     <div class="main" :class="{ 'expanded': isExpanded}" @click="onMainLogoClick">
-      <span class="app-title">Little Home Cafe</span>
+      <span class="app-title">
+        <AppLogo/>
+      </span>
+      <span class="content"></span>
     </div>
 
-    <div class="bar">
-      <ul class="list-left">
-        <li>This Week's Menu</li>
-        <li>Recipes</li>
-      </ul>
-      <ul class="list-right">
-        <li>Favorites</li>
-        <li>What's Good?</li>
-      </ul>
-    </div>
+    <div class="bar"></div>
   </div>
 </template>
 
@@ -31,6 +25,10 @@
   justify-content: center;
 
   overflow: hidden;
+}
+
+.content {
+  display: none;
 }
 
 .main {
@@ -81,22 +79,26 @@
 
     .content {
       display: flex;
+      align-self: center;
+
       height: 100%;
+      width: 90%;
+
       margin: 15px 15px;
       background: #fff9f9;
-      padding: 25px;
-      font-family: consolas;
+
+      font-family: "Poiret One", cursive;
     }
   }
 }
 
 .app-title {
   align-self: center;
-  width: 100%;
-  text-align: center;
+  //   width: 100%;
+  //   text-align: center;
   opacity: 0;
 
-  font-size: 48px;
+  //   font-size: 48px;
   font-family: "Poiret One", cursive;
 
   animation: reveal 3s ease-in-out forwards;
@@ -153,32 +155,6 @@
   100% {
     opacity: 1;
     width: 100%;
-  }
-}
-
-li {
-  display: inline;
-
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-}
-
-ul {
-  display: inline-block;
-  vertical-align: middle;
-
-  color: #ffffff;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  font-size: 2em;
-
-  &.list-right {
-    float: right;
-    padding-right: 1.5em;
-  }
-
-  &.list-left {
-    padding-left: 1.5em;
   }
 }
 </style>

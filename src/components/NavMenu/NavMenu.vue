@@ -32,6 +32,7 @@
           <div class="navbar-dropdown">
             <a class="navbar-item">Favorite Recipes</a>
             <a class="navbar-item">What's Good?</a>
+            <a class="navbar-item">Grocery List</a>
           </div>
         </div>
       </div>
@@ -66,6 +67,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: black;
 }
 </style>
